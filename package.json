@@ -35,7 +35,6 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.2.4",
-    "husky": "^8.0.0",
-    "vercel": "^28.17.0"
+    "husky": "^8.0.0"
   }
 }
