@@ -1,3 +1,5 @@
-const Moodiverse = () => <div>Moodiverse</div>;
+import AlertPage from "@/common/pages/alert-page";
+
+const Moodiverse = () => <AlertPage />;
 
 export default Moodiverse;
