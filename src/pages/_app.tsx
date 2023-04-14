@@ -1,13 +1,14 @@
-import { Analytics } from "@vercel/analytics/react";
-import type { AppProps } from "next/app";
+import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { AppProps } from "next/app";
 
 import "@/styles/globals.scss";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Component {...pageProps} />;
-      <Analytics />
-    </>
-  );
-}
+const queryClient = new QueryClient();
+const App = ({ Component, pageProps }: AppProps) => (
+  <QueryClientProvider client={queryClient}>
+    <Component {...pageProps} />
+  </QueryClientProvider>
+);
+
+export default App;
