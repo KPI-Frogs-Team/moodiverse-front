@@ -1,3 +1,3 @@
-const Moodiverse = () => <div>Development</div>;
+const Moodiverse = () => <div>Moodiverse</div>;
 
 export default Moodiverse;
