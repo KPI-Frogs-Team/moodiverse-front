@@ -17,13 +17,13 @@ const TabPage = () => {
   return (
     <Box sx={styles.wrapper}>
       <TabList value={value} onChange={handleChange} scroll="scrollable">
-        <Tab text={"Account Settings"} icon={<PersonIcon />} value={0} />
-        <Tab text={"Security Settings"} icon={<LockIcon />} value={1} />
+        <Tab text="Account Settings" icon={<PersonIcon />} value={0} />
+        <Tab text="Security Settings" icon={<LockIcon />} value={1} />
       </TabList>
 
       <TabList value={value} orientation="vertical" onChange={handleChange}>
-        <Tab text={"Account Settings"} icon={<PersonIcon />} value={0} />
-        <Tab text={"Security Settings"} icon={<LockIcon />} value={1} />
+        <Tab text="Account Settings" icon={<PersonIcon />} value={0} />
+        <Tab text="Security Settings" icon={<LockIcon />} value={1} />
       </TabList>
 
       <TabPanel value={value} index={0}>
