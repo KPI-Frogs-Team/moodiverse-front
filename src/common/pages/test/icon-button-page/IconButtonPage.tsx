@@ -12,34 +12,20 @@ const IconButtonPage: React.FC = () => {
       <IconButton
         icon={<ArrowRightRoundedIcon />}
         size="small"
-        isDisabled={true}
-        reactionOnClick={false}
+        isDisabled
         link="https://www.google.com/"
       />
-      <IconButton
-        icon={<ArrowRightRoundedIcon />}
-        size="small"
-        isDisabled={false}
-        reactionOnClick={false}
-      />
-      <IconButton
-        icon={<ArrowRightRoundedIcon />}
-        size="medium"
-        isDisabled={true}
-        reactionOnClick={false}
-      />
+      <IconButton icon={<ArrowRightRoundedIcon />} size="small" />
+      <IconButton icon={<ArrowRightRoundedIcon />} size="medium" isDisabled />
       <IconButton
         icon={<ArrowRightRoundedIcon />}
         size="large"
-        isDisabled={false}
-        reactionOnClick={false}
         link="https://www.google.com/"
       />
       <IconButton
         icon={<ArrowRightRoundedIcon />}
         size="large"
-        isDisabled={false}
-        reactionOnClick={true}
+        reactionOnClick
       />
     </Box>
   );
