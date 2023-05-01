@@ -6,7 +6,7 @@ import { input } from "./Input.styles";
 export interface InputProps {
   placeholder: string;
   size?: "small" | "medium" | "large";
-  variant?: "standard" | "outlined" | "filled";
+  variant?: "standard" | "outlined";
   isDisabled?: boolean;
   isRequired?: boolean;
   type?: "password" | "email" | "date";

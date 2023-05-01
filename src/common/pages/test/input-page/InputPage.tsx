@@ -11,9 +11,20 @@ const InputPage = () => {
       <br />
       <Input placeholder="Enter email..." type="email" isRequired />
       <br />
-      <Input placeholder="Enter password..." variant="filled" type="password" />
+      <Input
+        placeholder="Enter password..."
+        variant="standard"
+        type="password"
+      />
       <br />
       <Input placeholder="Enter something..." variant="standard" size="small" />
+      <br />
+      <Input
+        placeholder="Enter something..."
+        variant="standard"
+        size="small"
+        type="date"
+      />
     </Box>
   );
 };
