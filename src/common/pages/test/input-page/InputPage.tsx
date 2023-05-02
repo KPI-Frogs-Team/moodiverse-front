@@ -1,8 +1,9 @@
 import React from "react";
 import { Box } from "@mui/system";
 
-import Input from "@/common/components/input";
 import { wrapper } from "@/common/pages/test/input-page/InputPage.style";
+
+import Input from "../../../components/inputs/input";
 
 const InputPage = () => {
   return (

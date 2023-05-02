@@ -1,6 +1,9 @@
-import { ChangeEvent, FC, useRef, useState } from "react";
+import { FC } from "react";
 import { MenuItem, TextField } from "@mui/material";
-import { lightBlue } from "@mui/material/colors";
+
+import { sex } from "@/const/sex";
+import { useDropdownHTML } from "@/hooks/useDropdownHTML";
+import useLabel from "@/hooks/useLabel";
 
 import { dropdown, inputDropdown } from "./InputDropdown.styles";
 
@@ -12,17 +15,6 @@ export interface InputDropdownProps {
   isRequired?: boolean;
 }
 
-const sex = [
-  {
-    value: "Male",
-    label: "Male",
-  },
-  {
-    value: "Female",
-    label: "Female",
-  },
-];
-
 const InputDropdown: FC<InputDropdownProps> = ({
   placeholder,
   size = "medium",
@@ -30,21 +22,9 @@ const InputDropdown: FC<InputDropdownProps> = ({
   isDisabled = false,
   isRequired = false,
 }) => {
-  const [label, setLabel] = useState(placeholder);
-  const menuItemRef = useRef<HTMLLIElement | null>(null);
+  const [label, setLabel] = useLabel(placeholder);
+  const [menuItemRef, setStyles] = useDropdownHTML();
 
-  const dropdownHTML = () => {
-    const ulElement = menuItemRef.current?.parentNode as HTMLElement;
-    if (ulElement) {
-      const divElement = ulElement.parentNode as HTMLElement;
-      divElement.style.border = "2px solid" + lightBlue.A400 + "!important";
-      divElement.style.borderRadius = "10px";
-    }
-  };
-
-  const labelToPlaceholder = (event: ChangeEvent<HTMLInputElement>) => {
-    setLabel(event.target.value ? "" : placeholder);
-  };
   return (
     <TextField
       select
@@ -54,8 +34,8 @@ const InputDropdown: FC<InputDropdownProps> = ({
       disabled={isDisabled}
       required={isRequired}
       sx={inputDropdown(size)}
-      onChange={labelToPlaceholder}
-      onFocus={dropdownHTML}
+      onChange={setLabel}
+      onFocus={setStyles}
     >
       {sex.map((option) => (
         <MenuItem

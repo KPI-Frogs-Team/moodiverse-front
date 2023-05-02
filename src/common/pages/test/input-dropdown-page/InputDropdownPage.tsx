@@ -1,7 +1,8 @@
 import { Box } from "@mui/system";
 
-import InputDropdown from "@/common/components/input-dropdown";
 import { wrapper } from "@/common/pages/test/input-dropdown-page/InputDropdownPage.style";
+
+import InputDropdown from "../../../components/inputs/input-dropdown";
 
 const InputDropdownPage = () => {
   return (
