@@ -1,11 +1,10 @@
-import React from "react";
 import { Box } from "@mui/material";
 
 import Fab from "@/common/components/fab";
 
 import { wrapper } from "./FabPage.style";
 
-const FabPage: React.FC = () => (
+const FabPage = () => (
   <Box sx={wrapper}>
     <Fab variant="add" color="primary" size="large" />
     <Fab variant="edit" color="primary" size="large" />

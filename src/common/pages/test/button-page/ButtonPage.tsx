@@ -2,10 +2,10 @@ import { Box } from "@mui/material";
 
 import Button from "@/common/components/button";
 
-import * as styles from "./ButtonPage.style";
+import { wrapper } from "./ButtonPage.style";
 
 const ButtonPage = () => (
-  <Box sx={styles.wrapper}>
+  <Box sx={wrapper}>
     <Button text="Save" size="small" variant="contained" />
     <Button text="Save" size="small" variant="outlined" />
     <Button text="Save" size="small" variant="text" />

@@ -1,4 +1,3 @@
-import React from "react";
 import { Box } from "@mui/system";
 
 import { wrapper } from "@/common/pages/test/input-page/InputPage.style";

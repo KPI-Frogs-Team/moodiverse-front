@@ -1,4 +1,3 @@
-import { FC } from "react";
 import { MenuItem, TextField } from "@mui/material";
 
 import { sex } from "@/const/sex";
@@ -15,13 +14,13 @@ export interface InputDropdownProps {
   isRequired?: boolean;
 }
 
-const InputDropdown: FC<InputDropdownProps> = ({
+const InputDropdown = ({
   placeholder,
   size = "medium",
   variant = "outlined",
   isDisabled = false,
   isRequired = false,
-}) => {
+}: InputDropdownProps) => {
   const [label, setLabel] = useLabel(placeholder);
   const [menuItemRef, setStyles] = useDropdownHTML();
 

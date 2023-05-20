@@ -1,7 +1,6 @@
-import React from "react";
 import { Button as ButtonMUI, Typography } from "@mui/material";
 
-import * as styles from "./Button.styles";
+import { button } from "./Button.styles";
 
 export interface ButtonProps {
   text: string;
@@ -11,19 +10,19 @@ export interface ButtonProps {
   isDisabled?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
   text,
   variant = "contained",
   color = "primary",
   size = "medium",
   isDisabled = false,
-}) => (
+}: ButtonProps) => (
   <ButtonMUI
     disableRipple
     disabled={isDisabled}
     variant={variant}
     color={color}
-    sx={styles.button(size)}
+    sx={button(size)}
   >
     <Typography>{text}</Typography>
   </ButtonMUI>

@@ -1,4 +1,3 @@
-import React from "react";
 import { TextField } from "@mui/material";
 
 import { input } from "./Input.styles";
@@ -12,14 +11,14 @@ export interface InputProps {
   type?: "password" | "email" | "date";
 }
 
-const Input: React.FC<InputProps> = ({
+const Input = ({
   placeholder,
   size = "medium",
   variant = "outlined",
   isDisabled = false,
   isRequired = false,
   type,
-}) => (
+}: InputProps) => (
   <TextField
     placeholder={placeholder}
     variant={variant}

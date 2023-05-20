@@ -1,5 +1,4 @@
-import { FC, ReactNode } from "react";
-import * as React from "react";
+import { ReactNode } from "react";
 
 export interface TabPanelProps {
   value: number;
@@ -7,7 +6,7 @@ export interface TabPanelProps {
   children: ReactNode;
 }
 
-const TabPanel: FC<TabPanelProps> = ({ value, index, children }) => (
+const TabPanel = ({ value, index, children }: TabPanelProps) => (
   <div role="tabpanel" hidden={value !== index}>
     {value === index && children}
   </div>

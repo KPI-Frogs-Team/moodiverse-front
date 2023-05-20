@@ -1,4 +1,3 @@
-import React from "react";
 import ArrowRightRoundedIcon from "@mui/icons-material/ArrowRightRounded";
 import { Box } from "@mui/material";
 
@@ -6,7 +5,7 @@ import IconButton from "@/common/components/icon-button";
 
 import { wrapper } from "./IconButtonPage.style";
 
-const IconButtonPage: React.FC = () => {
+const IconButtonPage = () => {
   return (
     <Box sx={wrapper}>
       <IconButton

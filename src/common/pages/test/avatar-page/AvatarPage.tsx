@@ -1,11 +1,10 @@
-import { FC } from "react";
 import { Box } from "@mui/material";
 
 import Avatar from "@/common/components/avatar";
 
 import { wrapper } from "./AvatarPage.style";
 
-const AvatarPage: FC = () => (
+const AvatarPage = () => (
   <Box sx={wrapper}>
     <Avatar src="/avatars/avatar_filled.png" />
     <Avatar size="medium" />
